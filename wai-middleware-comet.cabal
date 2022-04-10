@@ -1,0 +1,33 @@
+cabal-version:      2.4
+name:               wai-middleware-comet
+version:            0
+
+synopsis:           WAI middleware that adds a comet interface transparently
+
+-- A longer description of the package.
+description:        See README.md                                           .
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+license:            BSD-3-Clause
+author:             Fumiaki Kinoshita
+maintainer:         fumiexcel@gmail.com
+
+-- A copyright notice.
+copyright:          copyright (c) 2022 Fumiaki Kinoshita
+category:           Web
+extra-source-files: CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/fumieval/wai-middlwware-comet
+
+library
+    exposed-modules:
+        Wai.Middleware.Comet
+        Wai.Middleware.Comet.Base
+    build-depends:    base >= 4.12 && <5, wai, stm, http-types, containers
+    hs-source-dirs:   .
+    default-language: Haskell2010
