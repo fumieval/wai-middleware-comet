@@ -21,7 +21,7 @@ create = do
       Nothing -> cont
       Just "true" -> wait comet key >> cont
       Just "false" -> cont
-      Just s -> sendResp $ responseLBS status400 [] $ "X-Comet-Wait must be true or false"
+      Just _ -> sendResp $ responseLBS status400 [] $ "X-Comet-Wait must be true or false"
 
 isImpureMethod :: Method -> Bool
 isImpureMethod "POST" = True

@@ -30,4 +30,5 @@ library
         Wai.Middleware.Comet.Base
     build-depends:    base >= 4.12 && <5, wai, stm, http-types, containers
     hs-source-dirs:   .
+    ghc-options: -Wall -Wcompat
     default-language: Haskell2010
